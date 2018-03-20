@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <h2>{{title}}</h2>
-    <button class="btn btn-primary" @click="fetchCharacter">Test Fetch Characters</button>
+    <Character/>
   </div>
 </template>
 
 <script>
+import Character from "./components/Character";
+
 export default {
   name: "app",
   data() {
@@ -13,12 +15,8 @@ export default {
       title: "Generate Your Team"
     };
   },
-  methods: {
-    fetchCharacter() {
-      fetch("https://swapi.co/api/people/", {
-        method: "GET"
-      }).then(res => console.log(res));
-    }
+  components: {
+    Character
   }
 };
 </script>
