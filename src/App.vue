@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app container">
     <h2>{{title}}</h2>
-    <div class="col-md-12">
+    <div class="row">
       <Character
         v-for="(id, index) in initial_ids"
         :id="id"
